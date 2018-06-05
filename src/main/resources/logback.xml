@@ -9,7 +9,7 @@
     </appender>
 
     <appender name="SYS_INFO" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${catalina.base}/program/info.log</File>
+        <File>D:/program/info.log</File>
         <append>true</append>
         <!--过滤器,只打INFO级别的日志-->
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
@@ -18,7 +18,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${catalina.base}/program/info.log.%d</fileNamePattern>
+            <fileNamePattern>D:/program/info.log.%d</fileNamePattern>
             <maxHistory>30</maxHistory>
         </rollingPolicy>
 
@@ -29,7 +29,7 @@
     </appender>
 
     <appender name="SYS_ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${catalina.base}/program/error.log</File>
+        <File>D:/program/error.log</File>
         <append>true</append>
         <!--过滤器,只打ERROR级别的日志-->
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
@@ -38,7 +38,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${catalina.base}/program/error.log.%d</fileNamePattern>
+            <fileNamePattern>D:/program/error.log.%d</fileNamePattern>
             <maxHistory>12</maxHistory>
         </rollingPolicy>
 
@@ -50,7 +50,7 @@
 
     <!--不同业务逻辑的日志打印到不同文件-->
     <appender name="YSYJAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${catalina.base}/program/ysyjlog/bt.log</File>
+        <File>D:/program/ysyjlog/bt.log</File>
         <append>true</append>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>INFO</level>
@@ -58,7 +58,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${catalina.base}/program/ysyjlog/bt.log.%d</fileNamePattern>
+            <fileNamePattern>D:/program/ysyjlog/bt.log.%d</fileNamePattern>
             <maxHistory>12</maxHistory>
         </rollingPolicy>
         <encoder charset="UTF-8">
@@ -68,7 +68,7 @@
     </appender>
 
     <appender name="AVAAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>${catalina.base}/program/avalog/xjk.log</File>
+        <File>D:/program/avalog/xjk.log</File>
         <append>true</append>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>INFO</level>
@@ -76,7 +76,24 @@
             <onMismatch>DENY</onMismatch>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${catalina.base}/program/avalog/xjk.log.%d</fileNamePattern>
+            <fileNamePattern>D:/program/avalog/xjk.log.%d</fileNamePattern>
+            <maxHistory>12</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>[%d{yyyy-MM-dd HH:mm:ss.SSS}] %level [%thread] %file:%line - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <appender name="EDFAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>D:/program/edflog/edf.log</File>
+        <append>true</append>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>D:/program/edflog/edf.log.%d</fileNamePattern>
             <maxHistory>12</maxHistory>
         </rollingPolicy>
         <encoder charset="UTF-8">
@@ -91,6 +108,9 @@
     </logger>
     <logger name="ava" additivity="false" level="INFO">
         <appender-ref ref="AVAAppender"/>
+    </logger>
+    <logger name="edf" additivity="false" level="INFO">
+        <appender-ref ref="EDFAppender"/>
     </logger>
 
     <logger name="com.act.award" level="INFO"/>
