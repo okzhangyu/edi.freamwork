@@ -67,8 +67,8 @@
         </encoder>
     </appender>
 
-    <appender name="AVAAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>D:/program/avalog/xjk.log</File>
+    <appender name="SYSppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>D:/program/syslog/sys.log</File>
         <append>true</append>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>INFO</level>
@@ -76,7 +76,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>D:/program/avalog/xjk.log.%d</fileNamePattern>
+            <fileNamePattern>D:/program/syslog/%d.log</fileNamePattern>
             <maxHistory>12</maxHistory>
         </rollingPolicy>
         <encoder charset="UTF-8">
@@ -93,7 +93,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>D:/program/edflog/edf.log.%d</fileNamePattern>
+            <fileNamePattern>D:/program/edflog/%d.log</fileNamePattern>
             <maxHistory>12</maxHistory>
         </rollingPolicy>
         <encoder charset="UTF-8">
@@ -106,8 +106,8 @@
     <logger name="ysyj" additivity="false" level="INFO">
         <appender-ref ref="YSYJAppender"/>
     </logger>
-    <logger name="ava" additivity="false" level="INFO">
-        <appender-ref ref="AVAAppender"/>
+    <logger name="sys" additivity="false" level="INFO">
+        <appender-ref ref="SYSppender"/>
     </logger>
     <logger name="edf" additivity="false" level="INFO">
         <appender-ref ref="EDFAppender"/>
