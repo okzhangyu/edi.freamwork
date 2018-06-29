@@ -15,15 +15,12 @@ public class TestLogger extends TestCase {
 
     @Test
     public void testDifPathLog(){
-        Logger ysyjLogger = LoggerUtils.Logger(LogFileName.YSYJ);
+
         Logger avaLogger = LoggerUtils.Logger(LogFileName.AVA);
         Logger edfLogger = LoggerUtils.Logger("edf");
-        ysyjLogger.info("YSYJ's log");
+
         avaLogger.info("AVA's log");
-
-        ysyjLogger.error("YSYJ's error log");
         avaLogger.error("AVA's error log");
-
         edfLogger.info("EDF's log");
         edfLogger.error("EDF's error");
     }

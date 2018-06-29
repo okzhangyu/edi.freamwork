@@ -7,8 +7,7 @@ import org.apache.commons.lang3.StringUtils;
  * @date 2018/6/2
  */
 public enum LogFileName {
-    YSYJ("ysyj"),
-    AVA("ava");
+    AVA("sys");
 
     private String logFileName;
 
