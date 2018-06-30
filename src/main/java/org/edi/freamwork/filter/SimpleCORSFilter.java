@@ -1,4 +1,4 @@
-package org.edi.freamwork.Filter;
+package org.edi.freamwork.filter;
 
 
 
