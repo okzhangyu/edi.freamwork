@@ -1,4 +1,4 @@
-package org.edi.freamwork.Filter;
+package org.edi.freamwork.filter;
 
 
 
@@ -9,7 +9,7 @@ import java.io.IOException;
  * Created by asus on 2018/6/20.
  */
 
-public class SimpleCORSFilter implements Filter {
+public class SimpleCorsFilter implements Filter {
     @Override
     public void destroy() {
 
