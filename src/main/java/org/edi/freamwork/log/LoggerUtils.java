@@ -21,4 +21,8 @@ public class LoggerUtils {
     public static Logger Logger(LogFileName desc) {
         return LoggerFactory.getLogger(desc.getLogFileName());
     }
+
+    public static Logger Logger(String strPath){
+        return  LoggerFactory.getLogger(strPath);
+    }
 }
