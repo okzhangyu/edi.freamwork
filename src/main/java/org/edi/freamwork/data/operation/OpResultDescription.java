@@ -1,4 +1,4 @@
-package org.edi.freamwork.operation;
+package org.edi.freamwork.data.operation;
 
 /**
  * @author Fancy

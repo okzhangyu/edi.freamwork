@@ -1,4 +1,4 @@
-package org.edi.freamwork.operation;
+package org.edi.freamwork.data.operation;
 
 import org.edi.freamwork.bo.IBusinessObject;
 
