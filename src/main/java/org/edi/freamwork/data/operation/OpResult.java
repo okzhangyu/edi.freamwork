@@ -1,6 +1,5 @@
-package org.edi.freamwork.operation;
+package org.edi.freamwork.data.operation;
 
-import com.sun.org.apache.xerces.internal.parsers.IntegratedParserConfiguration;
 import org.edi.freamwork.bo.IBusinessObject;
 
 import java.util.List;
@@ -16,6 +15,7 @@ public class OpResult<T extends IBusinessObject> implements IOpResult<T>{
      * 获取结果编码
      * @return
      */
+    @Override
     public Integer getCode(){
         return code;
     }
@@ -43,6 +43,7 @@ public class OpResult<T extends IBusinessObject> implements IOpResult<T>{
     /**
      * 设置第三方Id值
      */
+    @Override
     public void setThirdId(String value){
         this.thirdId = value;
     }
@@ -52,6 +53,7 @@ public class OpResult<T extends IBusinessObject> implements IOpResult<T>{
      * 获取结果消息
      * @return
      */
+    @Override
     public String getMessage(){
         return message;
     }
@@ -60,6 +62,7 @@ public class OpResult<T extends IBusinessObject> implements IOpResult<T>{
      * 设置结果消息值
      * @param value
      */
+    @Override
     public void setMessage(String value){
         this.message = value;
     }
@@ -69,6 +72,7 @@ public class OpResult<T extends IBusinessObject> implements IOpResult<T>{
      * 获取结果对象集合
      * @return
      */
+    @Override
     public List<T> getResultObject(){
         return this.resultObject;
     }
@@ -77,6 +81,7 @@ public class OpResult<T extends IBusinessObject> implements IOpResult<T>{
      * 设置结果对象集合
      * @param value
      */
+    @Override
     public void setResultObject(List<T> value){
         this.resultObject = value;
     }
