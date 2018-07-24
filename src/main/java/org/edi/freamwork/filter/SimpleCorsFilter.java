@@ -20,7 +20,7 @@ public class SimpleCorsFilter implements Filter {
                          FilterChain chain) throws IOException, ServletException {
         HttpServletResponse response = (HttpServletResponse) res;
         response.setHeader("Access-Control-Allow-Origin", "*");
-        response.setHeader("Access-Control-Allow-Methods", "POST, GET, DELETE,OPTIONS");
+        response.setHeader("Access-Control-Allow-Methods", "POST,PUT,GET, DELETE,OPTIONS");
         response.setHeader("Access-Control-Allow-Headers", "x-requested-with,content-type");
         chain.doFilter(req, res);
     }
