@@ -15,7 +15,7 @@ public class OpResultCode {
     *            1、错误 如：校验错误
     *            2、异常
     *  4、   第三、四位 模块代码
-    *  5、   第五、六位为具体错误：
+    *  5、   第五、六、七位为具体错误：
     *           如：token为空，编码规定为01，那么具体的编码为1101.
     **/
 
@@ -28,7 +28,7 @@ public class OpResultCode {
     /**
      * 对象为空
      */
-    public static final String OBJECT_IS_EMPTY = "6101";
+    public static final String OBJECT_IS_EMPTY = "6100001";
 
 
 
