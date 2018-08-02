@@ -13,4 +13,6 @@ public class OpResultDescription {
 
     public static final String DATA_IS_EMPTY="data is empty";
 
+    public static final String OBJECT_COMPANY_IS_NULL = "字段[company]为空";
+
 }

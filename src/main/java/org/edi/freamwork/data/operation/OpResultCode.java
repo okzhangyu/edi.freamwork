@@ -30,7 +30,9 @@ public class OpResultCode {
      */
     public static final String OBJECT_IS_EMPTY = "6100001";
 
+    public static final String OBJECT_COMPANY_IS_NULL = "6102001";
 
+    public static final String OBJECT_BASETYPE_IS_NULL = "6102002";
 
 
 
