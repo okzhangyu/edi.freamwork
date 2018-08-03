@@ -4,7 +4,7 @@ package org.edi.freamwork.bo;
  * @author Fancy
  * @date 2018/8/2
  */
-public class BusinessObject implements IBusinessObject{
+public class BusinessObject<T extends BusinessObject> implements IBusinessObject{
 
     private Boolean isDeleted;
     @Override
@@ -16,6 +16,7 @@ public class BusinessObject implements IBusinessObject{
     public void setIsDeleted(Boolean isDeleted) {
         this.isDeleted = isDeleted;
     }
+
 
     @Override
     public void checkBO() {

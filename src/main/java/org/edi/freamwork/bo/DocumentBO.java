@@ -10,7 +10,7 @@ import java.util.List;
  * @author Fancy
  * @date 2018/8/2
  */
-public class DocumentBO<T extends DocumentBOLine> extends BusinessObject implements IDocumentBO {
+public class DocumentBO extends BusinessObject implements IDocumentBO {
 
 
     public DocumentBO(){
@@ -32,12 +32,15 @@ public class DocumentBO<T extends DocumentBOLine> extends BusinessObject impleme
     public void initBO() {
     }
 
+
     @Override
     public void checkBO() {
-        if(this.companyName.isEmpty()){
+        super.checkBO();
+        if(this.getCompanyName() == null || this.getCompanyName().isEmpty()){
             throw new BusinessObjectException(OpResultCode.OBJECT_COMPANY_IS_NULL,
                     OpResultDescription.OBJECT_COMPANY_IS_NULL);
         }
     }
+
 
 }
