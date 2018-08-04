@@ -7,7 +7,7 @@ package org.edi.freamwork.data.operation;
  */
 public class OpResultDescription {
 
-    public static final String OP_SUCCESSFUL="operated successful";
+    public static final String OP_SUCCESSFUL="操作成功";
 
     public static final String VALUE_IS_EMPTY= "[%s]'s value is empty";
 
