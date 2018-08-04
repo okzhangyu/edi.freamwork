@@ -4,10 +4,12 @@ package org.edi.freamwork.bo;
  * @author Fancy
  * @date 2018/6/21
  */
-public interface IBusinessObject {
+public interface IBusinessObject extends IBOLogic,IBORules{
     /**
      * it's deleted
      * @return
      */
-    boolean  getIsDeleted();
+    Boolean  getIsDeleted();
+
+    void setIsDeleted(Boolean value);
 }
