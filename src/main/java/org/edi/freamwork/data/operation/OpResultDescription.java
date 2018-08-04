@@ -15,4 +15,8 @@ public class OpResultDescription {
 
     public static final String OBJECT_COMPANY_IS_NULL = "字段[company]为空";
 
+    public static final String DATABASE_CONNECT_ERROR = "数据库连接错误";
+
+    public static final String DATABASE_OPERATE_ERROR = "数据库操作发生错误";
+
 }
