@@ -15,6 +15,9 @@ public class BusinessException extends RuntimeException {
         return code;
     }
 
+    private String message = "";
+    public String getMessage(){return message;}
+
     public BusinessException() {
     }
 
@@ -37,5 +40,6 @@ public class BusinessException extends RuntimeException {
     public BusinessException(String code,String message){
         super(message);
         this.code = code;
+        this.message = message;
     }
 }
