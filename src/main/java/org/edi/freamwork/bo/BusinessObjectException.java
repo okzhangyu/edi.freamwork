@@ -14,15 +14,23 @@ public class BusinessObjectException extends RuntimeException{
         return code;
     }
 
+    private String message="";
+
+    public String getMessage(){return message;}
+
+
+
     public BusinessObjectException() {
     }
 
     public BusinessObjectException(String message) {
         super(message);
+        this.message = message;
     }
 
     public BusinessObjectException(String message, Throwable cause) {
         super(message, cause);
+        this.message = message;
     }
 
     public BusinessObjectException(Throwable cause) {
@@ -31,11 +39,13 @@ public class BusinessObjectException extends RuntimeException{
 
     public BusinessObjectException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
+        this.message = message;
     }
 
     public BusinessObjectException(String code,String message){
         super(message);
         this.code = code;
+        this.message = message;
     }
 
 }
