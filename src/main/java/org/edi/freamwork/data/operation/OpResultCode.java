@@ -34,6 +34,8 @@ public class OpResultCode {
 
     public static final String OBJECT_BASETYPE_IS_NULL = "6102002";
 
+    public static final String DATABASE_CONNECT_ERROR = "6200002";
 
+    public static final String DATABASE_OPERATE_ERROR = "6200003";
 
 }
