@@ -4,6 +4,9 @@ public class TranscationResult implements ITranscationResult {
 
     private String errorCode;
 
+    private String message;
+
+
     @Override
     public String getErrorCode() {
         return errorCode;
@@ -14,7 +17,6 @@ public class TranscationResult implements ITranscationResult {
         this.errorCode = errorCode;
     }
 
-    private String message;
     @Override
     public String getMessage() {
         return message;

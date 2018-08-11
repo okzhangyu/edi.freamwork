@@ -1,10 +1,6 @@
 package org.edi.freamwork.repository;
 
 import org.edi.freamwork.bo.BusinessObject;
-import org.edi.freamwork.exception.DBException;
-import org.edi.freamwork.transcation.ITranscationParam;
-import org.edi.freamwork.transcation.ITranscationResult;
-import org.edi.freamwork.transcation.TranscationParam;
 
 /**
  * @author Fancy
@@ -22,7 +18,7 @@ public abstract class BORepository<T extends BusinessObject> {
 
     protected abstract void delete(T bo) ;
 
-    protected abstract void callTranscation(T bo,String transType);
+    /*protected abstract void callTranscation(T bo,String transType);*/
 
     private void commitSession(){
 
@@ -31,17 +27,17 @@ public abstract class BORepository<T extends BusinessObject> {
     public final void saveBO(T bo) {
         bo.checkBO();
         this.save(bo);
-        this.callTranscation(bo,"A");
-    }
+      /*  this.callTranscation(bo,"A");*/
+}
 
     public final void updateBO(T bo){
         bo.checkBO();
         this.update(bo);
-        this.callTranscation(bo,"U");
+        /*this.callTranscation(bo,"U");*/
     }
 
     public final void deleteBO(T bo){
-        this.callTranscation(bo,"D");
+      /*  this.callTranscation(bo,"D");*/
         this.delete(bo);
     }
 
