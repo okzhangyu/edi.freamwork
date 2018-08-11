@@ -28,7 +28,12 @@ hs_err_pid*
 /.recommenders/
 /RemoteSystemsTempFiles/
 /Servers/
+.settings/
+/.settings/
 .idea/
 .idea
 .cache
 *.iml
+.project
+.classpath
+
