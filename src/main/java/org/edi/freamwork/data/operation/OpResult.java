@@ -8,15 +8,34 @@ import java.util.List;
  * 操作结果类
  * @param <T>
  */
-public class OpResult<T extends IBusinessObject> implements IOpResult<T>{
+public class OpResult<T extends Object> implements IOpResult<T>{
 
-    private Integer code;
+
+    public OpResult(){}
+
+    public OpResult(String code, String message){
+        this.code = code;
+        this.message = message;
+    }
+    public OpResult(String code, String message,String thirdId){
+        this.code = code;
+        this.message = message;
+        this.thirdId = thirdId;
+    }
+
+    public OpResult(String code, String message,String thirdId, List<T> data) {
+        this.code = code;
+        this.message = message;
+        this.thirdId = thirdId;
+        this.resultObject = data;
+    }
+    private String code;
     /**
      * 获取结果编码
      * @return
      */
     @Override
-    public Integer getCode(){
+    public String getCode(){
         return code;
     }
 
@@ -26,7 +45,7 @@ public class OpResult<T extends IBusinessObject> implements IOpResult<T>{
      * @param value
      */
     @Override
-    public void setCode(Integer value){
+    public void setCode(String value){
         this.code = value;
     }
 

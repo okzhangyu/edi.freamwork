@@ -4,19 +4,19 @@ import org.edi.freamwork.bo.IBusinessObject;
 
 import java.util.List;
 
-public interface IOpResult<T extends IBusinessObject> {
+public interface IOpResult<T extends Object> {
 
     /**
      * 获取结果编码
      * @return
      */
-    Integer getCode();
+    String getCode();
 
     /**
      * 设置结果编码值
      * @param value
      */
-    void setCode(Integer value);
+    void setCode(String value);
 
     /**
      * 获取第三方id值
