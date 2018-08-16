@@ -2,6 +2,7 @@ package org.edi.freamwork.data.operation;
 
 import org.edi.freamwork.bo.IBusinessObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,7 +12,9 @@ import java.util.List;
 public class OpResult<T extends Object> implements IOpResult<T>{
 
 
-    public OpResult(){}
+    public OpResult(){
+        this.resultObject = new ArrayList<T>();
+    }
 
     public OpResult(String code, String message){
         this.code = code;
