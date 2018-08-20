@@ -9,6 +9,8 @@ public class OpResultDescription {
 
     public static final String OP_SUCCESSFUL="操作成功";
 
+    public static final String NET_CONNECT_ERROR = "服务连接异常";
+
     public static final String VALUE_IS_EMPTY= "[%s]'s value is empty";
 
     public static final String DATA_IS_EMPTY="data is empty";
