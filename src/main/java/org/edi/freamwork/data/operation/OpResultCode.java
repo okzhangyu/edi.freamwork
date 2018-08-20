@@ -24,6 +24,9 @@ public class OpResultCode {
      */
     public static final String SUCCESS = "0";
 
+    public static final String FAIL="1";
+
+    public static final String NET_CONNECT_ERROR = "1200001";
 
     /**
      * 对象为空
