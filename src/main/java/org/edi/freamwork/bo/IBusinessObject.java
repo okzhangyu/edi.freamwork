@@ -9,7 +9,7 @@ public interface IBusinessObject extends IBOLogic,IBORules{
      * it's deleted
      * @return
      */
-    String  getIsDeleted();
+    Boolean  getIsDeleted();
 
-    void setIsDeleted(String value);
+    void setIsDeleted(Boolean value);
 }

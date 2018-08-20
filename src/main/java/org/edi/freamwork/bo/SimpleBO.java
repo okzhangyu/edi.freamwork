@@ -6,14 +6,14 @@ package org.edi.freamwork.bo;
  */
 public class SimpleBO implements ISimpleBO {
 
-    private String isDeleted;
+    private Boolean isDeleted;
     @Override
-    public String getIsDeleted() {
+    public Boolean getIsDeleted() {
         return isDeleted;
     }
 
     @Override
-    public void setIsDeleted(String isDeleted) {
+    public void setIsDeleted(Boolean isDeleted) {
         this.isDeleted = isDeleted;
     }
 
