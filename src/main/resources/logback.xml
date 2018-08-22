@@ -47,8 +47,8 @@
     </appender>
 
     <!--不同业务逻辑的日志打印到不同文件-->
-    <appender name="YSYJAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>C:/serviceLog/ysyjlog/bt.log</File>
+    <appender name="BusinessOneAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>C:/serviceLog/businessone/documentsync.log</File>
         <append>true</append>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>INFO</level>
@@ -56,7 +56,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>C:/serviceLog/ysyjlog/bt.log.%d</fileNamePattern>
+            <fileNamePattern>C:/serviceLog/businessone/documentsSync.log.%d</fileNamePattern>
             <maxHistory>12</maxHistory>
         </rollingPolicy>
         <encoder charset="UTF-8">
@@ -64,8 +64,8 @@
             <charset>UTF-8</charset>
         </encoder>
     </appender>
-    <appender name="SYSppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>C:/serviceLog/syslog/sys.log</File>
+    <appender name="Initialppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>C:/serviceLog/initial/initial.log</File>
         <append>true</append>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>INFO</level>
@@ -73,7 +73,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>C:/serviceLog/syslog/%d.log</fileNamePattern>
+            <fileNamePattern>C:/serviceLog/initial/%d.log</fileNamePattern>
             <maxHistory>12</maxHistory>
         </rollingPolicy>
         <encoder charset="UTF-8">
@@ -81,8 +81,8 @@
             <charset>UTF-8</charset>
         </encoder>
     </appender>
-    <appender name="EDFAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>C:/serviceLog/edflog/edf.log</File>
+    <appender name="StockTaskAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>C:/serviceLog/stocktask/stocktask.log</File>
         <append>true</append>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>INFO</level>
@@ -90,7 +90,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>C:/serviceLog/edflog/%d.log</fileNamePattern>
+            <fileNamePattern>C:/serviceLog/stocktask/%d.log</fileNamePattern>
             <maxHistory>12</maxHistory>
         </rollingPolicy>
         <encoder charset="UTF-8">
@@ -100,14 +100,14 @@
     </appender>
 
     <!-- 不同的业务逻辑日志打印到指定文件夹-->
-    <logger name="ysyj" additivity="false" level="INFO">
-        <appender-ref ref="YSYJAppender"/>
+    <logger name="businessone" additivity="false" level="INFO">
+        <appender-ref ref="BusinessOneAppender"/>
     </logger>
-    <logger name="sys" additivity="false" level="INFO">
-        <appender-ref ref="SYSppender"/>
+    <logger name="initial" additivity="false" level="INFO">
+        <appender-ref ref="Initialppender"/>
     </logger>
-    <logger name="edf" additivity="false" level="INFO">
-        <appender-ref ref="EDFAppender"/>
+    <logger name="stocktask" additivity="false" level="INFO">
+        <appender-ref ref="StockTaskAppender"/>
     </logger>
 
     <logger name="com.act.award" level="INFO"/>
