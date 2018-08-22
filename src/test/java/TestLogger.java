@@ -25,7 +25,7 @@ public class TestLogger extends TestCase {
         logger.warn("this is ware");
         logger.error("this is bug");
         logger.debug("this is debug");
-        avaLogger.info("AVA's log");
+        avaLogger.info("AVA's log %1","232323");
         avaLogger.error("AVA's error log");
         edfLogger.info("EDF's log");
         //edfLogger.info(new  Exception("this is eeror"));
