@@ -6,6 +6,7 @@ import org.edi.freamwork.exception.AuthrizationException;
 import org.edi.freamwork.exception.BusinessException;
 import org.edi.freamwork.exception.DBException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -48,6 +49,7 @@ public class Result<T> implements IResult<T> {
     }
 
     public Result() {
+        this.data = new ArrayList<>();
     }
 
     public Result(String code, String message, List<T> data) {
@@ -90,5 +92,14 @@ public class Result<T> implements IResult<T> {
     public Result(BusinessException e){
         this.code = e.getCode();
         this.message = e.getMessage();
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "code:'" + code + '\'' +
+                ", message:'" + message + '\'' +
+                ", data:" + data +
+                '}';
     }
 }
