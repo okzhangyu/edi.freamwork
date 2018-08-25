@@ -20,8 +20,8 @@ public class HttpRequest {
         try{
             HttpClient httpClient = HttpClientBuilder.create().build();
             RequestConfig requestConfig = RequestConfig.custom()
-                    .setConnectTimeout(10000).setConnectionRequestTimeout(5000)
-                    .setSocketTimeout(10000).build();
+                    .setConnectTimeout(50000).setConnectionRequestTimeout(10000)
+                    .setSocketTimeout(50000).build();
             HttpPost httpPost = new HttpPost(url);
             httpPost.setConfig(requestConfig);
             Gson gson = new Gson();
