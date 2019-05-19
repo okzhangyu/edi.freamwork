@@ -15,7 +15,7 @@ import org.apache.http.client.HttpClient;
  * @date 2018/8/20
  */
 public class HttpRequest {
-    private static final String url = "http://login3.avacloud.com.cn:9091/edi.businessone_Web/v1/documents";
+    private static final String url = "http://localhost:9091/edi.businessone_Web/v1/documents";
     public static String post(String requestJson) throws Exception {
         try{
             HttpClient httpClient = HttpClientBuilder.create().build();
